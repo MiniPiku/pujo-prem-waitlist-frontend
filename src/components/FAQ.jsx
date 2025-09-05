@@ -34,41 +34,41 @@ const FAQ = () => {
   return (
     <div className="max-w-4xl mx-auto">
       {/* FAQ Header */}
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-          Frequently asked questions
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-black text-brutal-black mb-6 font-brutal bg-brutal-pink border-6 border-brutal-black px-8 py-4 shadow-brutal transform rotate-2 hover:rotate-0 transition-transform duration-300">
+          FREQUENTLY ASKED QUESTIONS
         </h2>
-        <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-          Everything you need to know about the App. Find answers to the most common questions below.
+        <p className="text-brutal-black text-xl max-w-3xl mx-auto font-bold bg-brutal-white border-4 border-brutal-black px-6 py-4 shadow-brutal transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+          EVERYTHING YOU NEED TO KNOW ABOUT THE APP. FIND ANSWERS TO THE MOST COMMON QUESTIONS BELOW.
         </p>
       </div>
 
       {/* FAQ Items */}
-      <div className="space-y-4">
+      <div className="space-y-6">
         {faqs.map((faq, index) => (
           <motion.div
             key={index}
-            className="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden"
+            className="bg-brutal-white border-6 border-brutal-black shadow-brutal overflow-hidden transform hover:scale-105 transition-transform duration-200"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
           >
             <motion.button
               onClick={() => toggleFAQ(index)}
-              className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-750 transition-colors"
-              whileHover={{ scale: 1.01 }}
-              whileTap={{ scale: 0.99 }}
+              className="w-full px-8 py-6 text-left flex items-center justify-between bg-brutal-cyan hover:bg-brutal-yellow transition-colors duration-200"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
-              <span className="text-white font-medium text-lg">
-                {faq.question}
+              <span className="text-brutal-black font-black text-xl font-brutal">
+                {faq.question.toUpperCase()}
               </span>
               <motion.div 
-                className="flex-shrink-0 ml-4"
+                className="flex-shrink-0 ml-6 bg-brutal-black border-4 border-brutal-black p-2"
                 animate={{ rotate: openIndex === index ? 45 : 0 }}
                 transition={{ duration: 0.2 }}
               >
-                <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                <svg className="w-6 h-6 text-brutal-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                 </svg>
               </motion.div>
             </motion.button>
@@ -82,9 +82,9 @@ const FAQ = () => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="overflow-hidden"
                 >
-                  <div className="px-6 pb-4">
+                  <div className="px-8 pb-6 bg-brutal-white">
                     <motion.div 
-                      className="text-gray-300 leading-relaxed"
+                      className="text-brutal-black leading-relaxed font-bold text-lg"
                       initial={{ y: -10, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.2, delay: 0.1 }}

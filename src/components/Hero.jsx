@@ -49,13 +49,13 @@ const Hero = () => {
   };
 
   return (
-    <div className="text-center space-y-8">
+    <div className="text-center space-y-10">
       {/* Main Heading */}
-      <div className="space-y-4">
-        <h1 className="text-4xl md:text-6xl font-black text-white leading-tight">
+      <div className="space-y-6">
+        <h1 className="text-5xl md:text-7xl font-black text-brutal-black leading-tight font-brutal transform rotate-1 hover:rotate-0 transition-transform duration-300">
           SINGLE this Pujo?
         </h1>
-        <p className="text-lg md:text-xl text-gray-400 max-w-md mx-auto">
+        <p className="text-xl md:text-2xl text-brutal-black max-w-md mx-auto font-bold border-4 border-brutal-black bg-brutal-cyan px-6 py-3 shadow-brutal transform -rotate-1 hover:rotate-0 transition-transform duration-300">
           Join the waitlist to tie knots
         </p>
       </div>
@@ -63,46 +63,46 @@ const Hero = () => {
       {/* Email Input and Button */}
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto"
+        className="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-lg mx-auto"
       >
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-          className="w-full sm:flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-neon-yellow focus:ring-1 focus:ring-neon-yellow transition-colors"
+          placeholder="EMAIL"
+          className="w-full sm:flex-1 px-6 py-4 bg-brutal-white border-4 border-brutal-black text-brutal-black placeholder-brutal-gray font-bold text-lg focus:outline-none focus:border-brutal-red focus:shadow-brutal-red transition-all duration-200"
           required
         />
         <button
           type="submit"
-          className="w-full sm:w-auto px-8 py-3 bg-neon-yellow text-black font-semibold rounded-lg hover:bg-yellow-300 transition-colors duration-200 shadow-lg shadow-neon-yellow/20"
+          className="w-full sm:w-auto px-10 py-4 bg-brutal-yellow text-brutal-black font-black text-lg border-4 border-brutal-black shadow-brutal-yellow hover:shadow-brutal transition-all duration-200 transform hover:scale-105"
         >
-          Join waitlist
+          JOIN WAITLIST
         </button>
       </form>
 
       {/* Show message */}
       {message && (
-        <p
-          className={`mt-4 text-sm ${
-            message.type === "success" ? "text-green-400" : "text-red-400"
-          }`}
-        >
-          {message.text}
-        </p>
+        <div className={`mt-6 px-6 py-3 border-4 border-brutal-black shadow-brutal transform rotate-1 ${
+          message.type === "success" ? "bg-brutal-green text-brutal-white" : "bg-brutal-red text-brutal-white"
+        }`}>
+          <p className="font-bold text-lg">
+            {message.text}
+          </p>
+        </div>
       )}
 
-             {/* Social Proof */}
-       <div className="flex items-center justify-center space-x-3">
-         <div className="flex -space-x-2">
-           {[1, 2, 3, 4].map((i) => (
-             <Avatar key={i} />
-           ))}
-         </div>
-         <span className="text-gray-400 text-sm">
-           Join {count}+ others on the waitlist
-         </span>
-       </div>
+      {/* Social Proof */}
+      <div className="flex items-center justify-center space-x-4">
+        <div className="flex -space-x-3">
+          {[1, 2, 3, 4].map((i) => (
+            <Avatar key={i} />
+          ))}
+        </div>
+        <span className="text-brutal-black text-lg font-bold bg-brutal-pink border-4 border-brutal-black px-4 py-2 shadow-brutal transform -rotate-1">
+          Join {count}+ others on the waitlist
+        </span>
+      </div>
 
       {/* Countdown Timer */}
       <div className="pt-8">
