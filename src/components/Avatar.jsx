@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Avatar = ({ src, alt = "User avatar", size = "w-12 h-12" }) => {
+const Avatar = ({ src, alt = "User avatar", size = "w-10 h-10 sm:w-12 sm:h-12" }) => {
   return (
-    <div className={`${size} border-4 border-brutal-black overflow-hidden flex-shrink-0 shadow-brutal-sm transform hover:scale-110 transition-transform duration-200`}>
+    <div className={`${size} border-3 sm:border-4 border-brutal-black overflow-hidden flex-shrink-0 shadow-brutal-sm transform hover:scale-110 transition-transform duration-200`}>
       {src ? (
         <img
           src={src}
@@ -11,7 +11,7 @@ const Avatar = ({ src, alt = "User avatar", size = "w-12 h-12" }) => {
         />
       ) : (
         <div className="w-full h-full bg-brutal-cyan flex items-center justify-center">
-          <div className="w-6 h-6 bg-brutal-black"></div>
+          <div className="w-4 h-4 sm:w-6 sm:h-6 bg-brutal-black"></div>
         </div>
       )}
     </div>
